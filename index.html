@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Train Schedule</title>
+   
+   <!-- Bootstrap CDN-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+   <style type="text/css">
+     
+      td, th {
+        text-align: center;
+      }
+
+      .btn-default {
+        background: #ddd;
+      }
+
+      .table tbody tr:hover th {
+          background-color: #fff;
+      }
+
+      .table tbody tr:hover td {
+         cursor: pointer;
+      }
+
+      .btn {
+        padding-right: 10px;
+      }
+  </style>
+
+</head>
+   
+<body>
+
+  <div class="container container-fluid">
+      <div class="jumbotron text-center">
+        <h1>The Hippest Trip in America</h1>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Upcoming Trains</h3>
+        </div>
+
+        <table class="table table-hover" id="train-table">
+           <!-- <thead> -->
+             <tr>
+               <th class="timTest">Train Name</th>
+               <th>Destination</th>
+               <th>Frequency</th>
+               <th>First Arrival</th>
+               <th>Minutes Away</th>
+             </tr>
+           <!-- </thead> -->
+        </table>
+
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add Train</h3>
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+           <fieldset>
+           
+              
+             <div class="form-group">
+               <label for="inputEmployee" class="col-lg-2 control-label">Train Name</label>
+                 <div class="col-lg-9">
+                 <input type="text" class="form-control" id="name-input" placeholder="Name">
+                </div>
+             </div>
+             
+             <div class="form-group">
+               <label for="inputRole" class="col-lg-2 control-label">Destination</label>
+                 <div class="col-lg-9">
+                   <input type="role" class="form-control" id="destination-input" placeholder="End Point">
+                   <div class="text"></div>
+                 </div>
+             </div>
+                 
+              <div class="form-group">
+                    <label for="startDate" class="col-lg-2 control-label">First Train Time</label>
+                   <div class="col-lg-9">
+                 <input type="text" class="form-control" id="time-input" placeholder="HH:mm (Military Time)">
+                 </div>
+             </div>
+                 
+                 
+             <div class="form-group">
+              <label for="rate" class="col-lg-2 control-label">Frequency (min)</label>
+               <div class="col-lg-9">
+                 <input type="number" class="form-control" id="freq-input" placeholder="Ex: 17">
+               </div>
+            </div>
+                 
+
+             <div class="form-group">
+               <div class="col-lg-10 col-lg-offset-2">
+                 <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                 <span  id="button-area"></span>
+                
+               </div>
+             </div>
+
+           </fieldset>
+          </form>
+
+
+
+        </div>
+        
+
+
+      </div>
+  </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- bootstrap js library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- firebase js library -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- moment js library -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- my js logic -->
+    <script src="logic.js"></script>
+
+</body>
